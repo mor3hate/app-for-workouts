@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700&display=swap');
+@import './variables';
+#root {
+	height: 100vh;
+}
+* {
+	outline: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: $black;
+	color: #ffff;
+	font-family: 'Roboto';
+}
+
+.react-select {
+	&__control {
+		width: 100%;
+		min-height: 47px !important;
+		border-radius: 10px !important;
+		margin-bottom: 2rem;
+		text-align: left;
+		border: 1px solid transparent !important;
+		background-color: $purple !important;
+		&--is-focused {
+			border-color: rgba($accent-color, 0.3) !important;
+			box-shadow: none !important;
+		}
+	}
+	&__placeholder {
+		color: #946e86 !important;
+		margin-left: 6px !important;
+		font-size: 16px !important;
+	}
+	&__menu {
+		background-color: $purple !important;
+		&-notice {
+			color: #946e86 !important;
+		}
+	}
+	&__option {
+		cursor: pointer !important;
+		&--is-selected {
+			background-color: transparent !important;
+		}
+		&--is-focused {
+			background-color: darken($purple, 7%) !important;
+		}
+	}
+	&__single-value {
+		color: #ffff !important;
+	}
+	&__menu-list {
+		padding: 0 !important;
+	}
+	&__dropdown-indicator {
+		cursor: pointer !important;
+		color: #ffff !important;
+		&:hover {
+			color: rgb(194, 192, 192) !important;
+		}
+	}
+	&__clear-indicator {
+		cursor: pointer !important;
+		color: #ffff !important;
+		&:hover {
+			color: rgb(194, 192, 192) !important;
+		}
+	}
+	&__multi-value {
+		border-radius: 5px !important;
+		background-color: lighten($purple, 10%) !important;
+		&__label {
+			color: #ffff !important;
+			font-size: 16px !important;
+		}
+	}
+	&__input {
+		color: #ffff !important;
+	}
+}

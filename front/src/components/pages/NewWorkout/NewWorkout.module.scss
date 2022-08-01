@@ -1,0 +1,26 @@
+@import '../../../scss/variables';
+
+.wrapper {
+	padding: 50px 90px;
+	text-align: center;
+	@media (max-width: 425px) {
+		padding: 50px 10px;
+	}
+}
+
+.form {
+	max-width: 320px;
+	margin: 0 auto;
+}
+
+.link {
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	transition: color 0.2s ease;
+	text-align: right;
+	&:hover {
+		color: $accent-color;
+	}
+}

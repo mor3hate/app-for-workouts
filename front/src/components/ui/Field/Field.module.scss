@@ -1,0 +1,20 @@
+@import '../../../scss/variables';
+
+.input {
+	cursor: pointer;
+	background-color: $purple;
+	border-radius: 10px;
+	width: 100%;
+	min-height: 47px;
+	border: 1px solid transparent;
+	color: $white;
+	font-size: 16px;
+	padding: 14px;
+	margin-bottom: 1.5rem;
+	&::placeholder {
+		color: #946e86;
+	}
+	&:focus {
+		border-color: rgba($accent-color, 0.3);
+	}
+}
