@@ -1,0 +1,24 @@
+@import '../../../scss/animations';
+
+.alert {
+	max-width: 320px;
+	margin: 0 auto;
+	width: 100%;
+	margin-bottom: 1rem;
+	background-color: #5be7c4;
+	color: #252a34;
+	animation: fade 0.4s;
+	padding: 10px;
+	border-radius: 10px;
+	&.error {
+		background-color: #ff2e63;
+		color: #ffff;
+	}
+	&.info {
+		background-color: #50c1e9;
+	}
+	&.warning {
+		background-color: #f75940;
+		color: #ffff;
+	}
+}

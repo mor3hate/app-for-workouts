@@ -1,0 +1,18 @@
+@import '../../../scss/variables';
+
+.wrapper-button {
+	display: flex;
+	align-items: center;
+	@media (max-width: 321px) {
+		flex-direction: column;
+		gap: 20px;
+	}
+	> button {
+		&:last-child {
+			background-color: $dark-purple;
+			&:hover {
+				background-color: #81225f;
+			}
+		}
+	}
+}

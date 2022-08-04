@@ -17,8 +17,8 @@ const NewWorkout = () => {
 	return (
 		<>
 			<Layout bgImage={newWorkoutBgImg} heading='Create new workout' />
-			<div className={styles.wrapper}>
-				<form className={styles.form}>
+			<div className='wrapper-inner'>
+				<form className='form'>
 					<Field
 						placeholder='Enter name'
 						value={name}
