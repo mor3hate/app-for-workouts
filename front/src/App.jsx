@@ -1,20 +1,45 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Auth from './components/pages/Auth/Auth'
-import Home from './components/pages/Home/Home'
-import NewExercise from './components/pages/NewExercise/NewExercise'
-import NewWorkout from './components/pages/NewWorkout/NewWorkout'
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import { useAuth } from './hooks/useAuth'
+import { route } from './routes'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 const App = () => {
+	const { isAuth } = useAuth()
+
+	const location = useLocation()
+
 	return (
-		<Router>
-			<Routes>
-				<Route exact path='/' element={<Home />} />
-				<Route exact path='/new-workout' element={<NewWorkout />} />
-				<Route exact path='/new-exercise' element={<NewExercise />} />
-				<Route exact path='/auth' element={<Auth />} />
-			</Routes>
-		</Router>
+		<TransitionGroup>
+			<CSSTransition
+				key={location.pathname}
+				classNames='pages'
+				timeout={1000}
+				unmountOnExit
+			>
+				<Routes location={location}>
+					{route.map(item => {
+						if (item.auth && !isAuth) {
+							return (
+								<Route
+									key={`route ${item.path}`}
+									path={item.path}
+									element={<Navigate to='/auth' />}
+								/>
+							)
+						}
+						return (
+							<Route
+								exact={item.exact}
+								path={item.path}
+								element={<item.element />}
+								key={`route ${item.path}`}
+							/>
+						)
+					})}
+				</Routes>
+			</CSSTransition>
+		</TransitionGroup>
 	)
 }
 

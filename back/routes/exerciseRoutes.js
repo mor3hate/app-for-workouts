@@ -7,6 +7,7 @@ import {
 } from '../controllers/exercise/exerciseController.js'
 import {
 	addNewExerciseLog,
+	deleteExerciseLog,
 	getExerciseLog,
 } from '../controllers/exercise/exerciseLogController.js'
 import {
@@ -30,5 +31,8 @@ router
 
 router.route('/log/completed').put(updateCompleteExerciseLog)
 
-router.route('/log/:id').get(protect, getExerciseLog)
+router
+	.route('/log/:id')
+	.get(protect, getExerciseLog)
+	.delete(protect, deleteExerciseLog)
 export default router

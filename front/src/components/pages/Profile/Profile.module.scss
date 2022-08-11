@@ -1,0 +1,13 @@
+@import '../../../scss/variables';
+
+.center {
+	text-align: center;
+	margin-bottom: 1rem;
+	> img {
+		margin-bottom: 0.5rem;
+	}
+}
+
+.heading {
+	margin-bottom: 1.5rem;
+}

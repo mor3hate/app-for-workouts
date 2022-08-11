@@ -5,7 +5,7 @@ import { generateToken } from '../../helpers/generateToken.js'
 // @route POST /api/users
 // @access Public
 export const register = asyncHandler(async (req, res) => {
-	const { email, password } = req.body
+	const { name, email, password } = req.body
 
 	const isHaveUser = await User.findOne({ email })
 
@@ -15,6 +15,7 @@ export const register = asyncHandler(async (req, res) => {
 	}
 
 	const user = await User.create({
+		name,
 		email,
 		password,
 	})

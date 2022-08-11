@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import menuImage from '../../../../images/header/hamburger.svg'
 import menuClose from '../../../../images/header/hamburger-close.svg'
 import styles from './Hamburger.module.scss'
 import { useNavigate } from 'react-router-dom'
+import { useOutsideClick } from '../../../../hooks/outsideClick'
+import { useAuth } from '../../../../hooks/useAuth'
 
 const menu = [
 	{
@@ -20,28 +22,29 @@ const menu = [
 ]
 
 const Hamburger = () => {
-	const [show, setShow] = useState(false)
+	const { setIsAuth } = useAuth()
 	const navigate = useNavigate()
+	const { ref, isVisible, setIsVisible } = useOutsideClick(false)
 
 	const logOut = () => {
-		console.log('logout')
+		localStorage.removeItem('token')
+		setIsAuth(false)
+		setIsVisible(false)
 	}
 
 	return (
-		<div className={styles.wrapper}>
-			<button type='button' onClick={() => setShow(!show)}>
-				<img src={show ? menuClose : menuImage} alt='menu' height='24' />
+		<div className={styles.wrapper} ref={ref}>
+			<button type='button' onClick={() => setIsVisible(!isVisible)}>
+				<img src={isVisible ? menuClose : menuImage} alt='menu' height='24' />
 			</button>
-			<nav className={`${styles.menu} ${show ? styles.show : ''}`}>
+			<nav className={`${styles.menu} ${isVisible ? styles.show : ''}`}>
 				{menu.map((item, i) => (
-					<li key={i} onClick={() => navigate(item.link)}>
+					<li key={`${item} ${i}`} onClick={() => navigate(item.link)}>
 						{item.title}
 					</li>
 				))}
 				<li>
-					<a href='/' onClick={() => logOut}>
-						Logout
-					</a>
+					<button onClick={logOut}>Logout</button>
 				</li>
 			</nav>
 		</div>

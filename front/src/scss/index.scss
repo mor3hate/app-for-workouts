@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700&display=swap');
 @import './variables';
+@import './animations';
 #root {
 	height: 100vh;
 }
@@ -10,10 +11,22 @@
 	border: 0;
 	box-sizing: border-box;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
 body {
 	background-color: $black;
 	color: #ffff;
 	font-family: 'Roboto';
+	overflow: hidden;
 }
 
 .wrapper-inner {
@@ -93,4 +106,66 @@ body {
 	&__input {
 		color: #ffff !important;
 	}
+}
+
+.exercise-badge {
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	&:hover {
+		background-color: #671f43;
+	}
+	margin: 0 auto 30px;
+	display: flex;
+	max-width: 400px;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $purple;
+	padding: 10px 16px;
+	border-radius: 10px;
+	box-shadow: $box-shadow-black10;
+	&.finished {
+		background-color: $dark-purple;
+		&:hover {
+			background-color: #441232;
+		}
+	}
+	> span {
+		font-size: 18px;
+	}
+	&.closed {
+		animation: fadeOut 0.5s;
+	}
+	&.final-closed {
+		display: none;
+	}
+}
+
+.alert-enter {
+	opacity: 0;
+	transform: scale(0.9);
+}
+.alert-enter-active {
+	opacity: 1;
+	transform: translateX(0);
+	transition: opacity 300ms, transform 300ms;
+}
+.alert-exit {
+	opacity: 1;
+}
+.alert-exit-active {
+	opacity: 0;
+	transform: scale(0.9);
+	transition: opacity 300ms, transform 300ms;
+}
+
+.pages {
+	position: absolute;
+}
+
+.pages-enter-active {
+	animation: fadeIn 1s forwards;
+}
+
+.pages-exit-active {
+	opacity: 0;
 }

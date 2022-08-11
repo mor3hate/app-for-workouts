@@ -20,13 +20,12 @@ router
 	.get(protect, getWorkouts)
 	.post(protect, addNewWorkout)
 	.put(protect, updateWorkout)
-	.delete(protect, deleteWorkout)
 
 router.route('/log').post(protect, addNewWorkoutLog)
 
 router.route('/log/completed').put(protect, updateWorkoutLog)
 
-router.route('/:id').get(protect, getWorkout)
+router.route('/:id').get(protect, getWorkout).delete(protect, deleteWorkout)
 
 router.route('/log/:id').get(protect, getWorkoutLog)
 

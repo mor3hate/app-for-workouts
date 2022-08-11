@@ -32,7 +32,7 @@ export const addNewExerciseLog = asyncHandler(async (req, res) => {
 export const getExerciseLog = asyncHandler(async (req, res) => {
 	const exerciseLog = await ExerciseLog.findById(req.params.id).populate(
 		'exercise',
-		'name imageId'
+		'name imageName'
 	)
 
 	if (!exerciseLog) {
@@ -67,4 +67,20 @@ export const getExerciseLog = asyncHandler(async (req, res) => {
 		...log,
 		times: newTimes,
 	})
+})
+
+// @desc Delete exercise
+// @route DELETE /api/exercises/log/:id
+// @access Private
+export const deleteExerciseLog = asyncHandler(async (req, res) => {
+	const exercise = await ExerciseLog.findById(req.params.id)
+
+	if (!exercise) {
+		res.status(404)
+		throw new Error('Данное упражнение не найдено')
+	}
+
+	await exercise.remove()
+
+	res.json({ message: 'Данное упражнение удалено' })
 })

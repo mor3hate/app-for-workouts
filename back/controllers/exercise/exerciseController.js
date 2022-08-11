@@ -4,12 +4,12 @@ import asyncHandler from 'express-async-handler'
 // @route POST /api/exercises
 // @access Private
 export const addNewExercise = asyncHandler(async (req, res) => {
-	const { name, times, imageId } = req.body
+	const { name, times, imageName } = req.body
 
 	const exercise = await Exercise.create({
 		name,
 		times,
-		imageId: imageId,
+		imageName,
 	})
 
 	res.json(exercise)
@@ -20,7 +20,7 @@ export const addNewExercise = asyncHandler(async (req, res) => {
 // @access Private
 
 export const updateExercises = asyncHandler(async (req, res) => {
-	const { name, times, imageId, exerciseId } = req.body
+	const { name, times, imageName, exerciseId } = req.body
 
 	const exercise = await Exercise.findById(exerciseId)
 
@@ -31,7 +31,7 @@ export const updateExercises = asyncHandler(async (req, res) => {
 
 	exercise.name = name
 	exercise.times = times
-	exercise.imageId = imageId
+	exercise.imageName = imageName
 
 	const updatedExercise = await exercise.save()
 

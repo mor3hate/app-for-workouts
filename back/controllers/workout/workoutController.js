@@ -55,13 +55,11 @@ export const updateWorkout = asyncHandler(async (req, res) => {
 })
 
 // @desc Delete workout
-// @route DELETE /api/workouts
+// @route DELETE /api/workout/:id
 // @access Private
 
 export const deleteWorkout = asyncHandler(async (req, res) => {
-	const { workoutId } = req.body
-
-	const workout = await Workout.findById(workoutId)
+	const workout = await Workout.findById(req.params.id)
 
 	if (!workout) {
 		res.status(404)
@@ -70,7 +68,7 @@ export const deleteWorkout = asyncHandler(async (req, res) => {
 
 	await workout.remove()
 
-	res.json({ message: 'Данная тренировка удалено' })
+	res.json({ message: 'Данная тренировка удалена' })
 })
 
 // @desc Get workouts
