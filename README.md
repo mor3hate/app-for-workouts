@@ -8,4 +8,7 @@
 <p>Set times and completed status💪</p>
 <p>Track your activity🏃</p>
 <h2>Technology stack</h3>
-<b style="text-decoration: underline">BackEnd:</b> NodeJS, Express, MongoDB, Mongoose. <b style="text-decoration: underline">FrontEnd:</b> React, React-router-dom, React Query, Axios, React-select, React-transition group
+<p align='center'><strong>BackEnd:<strong></p> 
+<p align='center'>NodeJS, Express, MongoDB, Mongoose</p> 
+<p align='center'><strong>FrontEnd:<strong></p> 
+<p align='center'>React, React-router-dom, React Query, Axios, React-select, React-transition group</p>
