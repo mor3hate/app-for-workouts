@@ -7,3 +7,5 @@
 <p>Creating workouts from your exercises🥇</p>
 <p>Set times and completed status💪</p>
 <p>Track your activity🏃</p>
+<h2>Technology stack</h3>
+<b>BackEnd:</b> NodeJS, Express, MongoDB, Mongoose. <b>FrontEnd:</b> React, React-router-dom, React Query, Axios, React-select, React-transition group
