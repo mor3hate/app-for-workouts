@@ -1,7 +1,6 @@
 <h1 align="center">App for workouts</h1>
-<p>In this app you can create your new sport habit</p>
-<p>Features: </p>
-<br>
+<h2>In this app you can create your new sport habit</h2>
+<h3>Features: </h3>
 <br>
 <p>Creating an account</p>
 <p>Authorization</p>
