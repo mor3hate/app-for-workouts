@@ -16,11 +16,25 @@ import { useAuth } from '../../../hooks/useAuth'
 
 const Auth = () => {
 	const [email, setEmail] = useState('')
+	const [emailError, setEmailError] = useState('')
 	const [name, setName] = useState('')
 	const [password, setPassword] = useState('')
 	const [type, setType] = useState('auth')
 	const navigate = useNavigate()
 	const { setIsAuth } = useAuth()
+
+	const emailValidateHandler = e => {
+		setEmail(e.target.value)
+		if (
+			!e.target.value.match(
+				/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+			)
+		) {
+			setEmailError('Incorrect email')
+		} else {
+			setEmailError('')
+		}
+	}
 
 	const {
 		mutate: register,
@@ -89,7 +103,7 @@ const Auth = () => {
 
 	return (
 		<>
-			<Layout bgImage={authBgImg} heading='Auth | | Register' />
+			<Layout back='/' bgImage={authBgImg} heading='Auth | | Register' />
 			<div className='wrapper-inner'>
 				{error && <Alert type='error' text={error} />}
 				{errorAuth && <Alert type='error' text={errorAuth} />}
@@ -104,17 +118,16 @@ const Auth = () => {
 							onChange={e => setName(e.target.value)}
 						/>
 					)}
+					{emailError && <div className={styles.notify}>{emailError}</div>}
 					<Field
 						placeholder='Enter email'
 						value={email}
-						required
-						onChange={e => setEmail(e.target.value)}
+						onChange={e => emailValidateHandler(e)}
 					/>
 					<Field
 						placeholder='Enter password'
 						type='password'
 						value={password}
-						required
 						onChange={e => setPassword(e.target.value)}
 					/>
 					<div className={styles['wrapper-button']}>

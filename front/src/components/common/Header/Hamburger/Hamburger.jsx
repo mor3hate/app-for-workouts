@@ -1,4 +1,3 @@
-import React from 'react'
 import menuImage from '../../../../images/header/hamburger.svg'
 import menuClose from '../../../../images/header/hamburger-close.svg'
 import styles from './Hamburger.module.scss'

@@ -14,6 +14,11 @@ export const register = asyncHandler(async (req, res) => {
 		throw new Error('Данный пользователь уже зарегистрирован')
 	}
 
+	if (!name || !email || !password) {
+		res.status(500)
+		throw new Error('Укажите все поля')
+	}
+
 	const user = await User.create({
 		name,
 		email,

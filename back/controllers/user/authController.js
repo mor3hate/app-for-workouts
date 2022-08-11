@@ -7,6 +7,11 @@ import { generateToken } from '../../helpers/generateToken.js'
 export const authUser = asyncHandler(async (req, res) => {
 	const { email, password } = req.body
 
+	if (!email || !password) {
+		res.status(401)
+		throw new Error('Укажите все поля')
+	}
+
 	const user = await User.findOne({ email })
 
 	if (user && (await user.matchPassword(password))) {
