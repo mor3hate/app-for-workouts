@@ -30,10 +30,10 @@ app.use('/api/workouts', workoutRoutes)
 
 if (process.env.NODE_ENV === 'production') {
 	// Step 1:
-	app.use(express.static(path.resolve(__dirname, './client/build')))
+	app.use(express.static(path.resolve(__dirname, './front/build')))
 	// Step 2:
 	app.get('*', function (request, response) {
-		response.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
+		response.sendFile(path.resolve(__dirname, './front/build', 'index.html'))
 	})
 }
 
