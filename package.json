@@ -5,13 +5,12 @@
 	"main": "server.js",
 	"type": "module",
 	"scripts": {
-		"server": "nodemon back/server",
-		"server-start": "node back/server",
-		"start": "concurrently \"npm run server-start\" \"npm run start --prefix front\"",
-		"dev": "concurrently \"npm run server\" \"npm run start --prefix front\"",
 		"build": "cd front && npm run build",
 		"install-client": "cd front && npm install",
-		"heroku-postbuild": "cd front && npm install && npm run build"
+		"heroku-postbuild": "npm run install-client && npm run build",
+		"server": "nodemon server.js",
+		"develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix front\"",
+		"start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix front\""
 	},
 	"author": "mor3hate",
 	"license": "ISC",
