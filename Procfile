@@ -1,1 +1,1 @@
-web: node back/server.js
+web: npm start

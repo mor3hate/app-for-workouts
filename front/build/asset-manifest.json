@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0b57c9bb.css",
+    "main.js": "/static/js/main.326a1fda.js",
+    "static/js/787.71df535f.chunk.js": "/static/js/787.71df535f.chunk.js",
+    "static/media/workout-list.jpg": "/static/media/workout-list.0f3ac05faaabbac81e74.jpg",
+    "static/media/add-new-exercise.jpg": "/static/media/add-new-exercise.cf524d2172f89d2bdcea.jpg",
+    "static/media/biceps.jpg": "/static/media/biceps.6e1115ddebe0530a2d97.jpg",
+    "static/media/cardio.jpg": "/static/media/cardio.d1395525a1f8cf4aea69.jpg",
+    "static/media/create-new-workout.jpg": "/static/media/create-new-workout.f310a5ab3569f36384ac.jpg",
+    "static/media/exercise-page.jpg": "/static/media/exercise-page.f310a5ab3569f36384ac.jpg",
+    "static/media/shoulders.jpg": "/static/media/shoulders.6a352429ebe0ec649522.jpg",
+    "static/media/chest-workout.jpg": "/static/media/chest-workout.864c499ed53a22629e5f.jpg",
+    "static/media/profile.jpg": "/static/media/profile.8a1ef0d9725881062027.jpg",
+    "static/media/home-image.jpg": "/static/media/home-image.158afd0e7ad99bb59988.jpg",
+    "static/media/legs.jpg": "/static/media/legs.c512fde6dc974bf23533.jpg",
+    "static/media/auth.jpg": "/static/media/auth.80ee88da088c562de81e.jpg",
+    "static/media/user-auth-true.svg": "/static/media/user-auth-true.1becb31a9ed55244725f7f5004ecd94e.svg",
+    "static/media/user.svg": "/static/media/user.b1888a196d4a1cacfd381a2767d89e3e.svg",
+    "static/media/checkbox-completed.svg": "/static/media/checkbox-completed.7029b1fcf72c1d472e44e7bc355facc6.svg",
+    "static/media/checkbox.svg": "/static/media/checkbox.42730e28dce6f71cb4f9b876a0d52da9.svg",
+    "index.html": "/index.html",
+    "static/media/arrow.svg": "/static/media/arrow.b9642e6d78d0fc31be8eaf9c11fe8ea2.svg",
+    "static/media/hamburger.svg": "/static/media/hamburger.ef0f4fd53dc251340fdf6e307d5943ad.svg",
+    "static/media/hamburger-close.svg": "/static/media/hamburger-close.ac704b3880b061f2aa1e1a4358b3c9e3.svg",
+    "main.0b57c9bb.css.map": "/static/css/main.0b57c9bb.css.map",
+    "main.326a1fda.js.map": "/static/js/main.326a1fda.js.map",
+    "787.71df535f.chunk.js.map": "/static/js/787.71df535f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b57c9bb.css",
+    "static/js/main.326a1fda.js"
+  ]
+}
