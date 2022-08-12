@@ -32,6 +32,12 @@ app.use(errorHandler)
 
 const PORT = process.env.PORT || 5000
 
+app.use(express.static(path.resolve(__dirname, './front/build')))
+
+app.get('*', function (request, response) {
+	response.sendFile(path.resolve(__dirname, './front/build', 'index.html'))
+})
+
 app.listen(
 	PORT,
 	console.log(
