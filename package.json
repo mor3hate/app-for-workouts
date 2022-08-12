@@ -11,7 +11,7 @@
 		"dev": "concurrently \"npm run server\" \"npm run start --prefix front\"",
 		"build": "cd front && npm run build",
 		"install-client": "cd front && npm install",
-		"heroku-postbuild": "set NPM_CONFIG_PRODUCTION=false npm install --prefix front && npm run build --prefix front"
+		"heroku-postbuild": "npm install --prefix front && npm run build --prefix front"
 	},
 	"author": "mor3hate",
 	"license": "ISC",
@@ -22,11 +22,11 @@
 		"express-async-handler": "^1.2.0",
 		"jsonwebtoken": "^8.5.1",
 		"mongoose": "^6.4.6",
-		"sass": "^1.54.0"
+		"sass": "^1.54.0",
+		"concurrently": "^7.3.0"
 	},
 	"devDependencies": {
 		"colors": "^1.4.0",
-		"concurrently": "^7.3.0",
 		"morgan": "^1.10.0",
 		"nodemon": "^2.0.19"
 	}
