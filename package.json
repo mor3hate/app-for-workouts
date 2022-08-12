@@ -22,11 +22,11 @@
 		"jsonwebtoken": "^8.5.1",
 		"mongoose": "^6.4.6",
 		"sass": "^1.54.0",
-		"concurrently": "^7.3.0"
+		"concurrently": "^7.3.0",
+		"nodemon": "^2.0.19"
 	},
 	"devDependencies": {
 		"colors": "^1.4.0",
-		"morgan": "^1.10.0",
-		"nodemon": "^2.0.19"
+		"morgan": "^1.10.0"
 	}
 }
