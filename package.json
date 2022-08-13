@@ -5,12 +5,11 @@
 	"main": "server.js",
 	"type": "module",
 	"scripts": {
-		"build": "cd front && npm run build",
-		"install-client": "cd front && npm install",
-		"heroku-postbuild": "npm run install-client && npm run build",
-		"server": "nodemon back/server.js",
-		"develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix front\"",
-		"start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix front\""
+		"start": "node back/server.js",
+		"heroku-postbuild": "cd front && npm install --only=dev && npm install && npm run build"
+	},
+	"engines": {
+		"node": "16.13.2"
 	},
 	"author": "mor3hate",
 	"license": "ISC",
@@ -22,10 +21,10 @@
 		"jsonwebtoken": "^8.5.1",
 		"mongoose": "^6.4.6",
 		"sass": "^1.54.0",
-		"concurrently": "^7.3.0",
-		"nodemon": "^2.0.19"
+		"concurrently": "^7.3.0"
 	},
 	"devDependencies": {
+		"nodemon": "^2.0.19",
 		"colors": "^1.4.0",
 		"morgan": "^1.10.0"
 	}
