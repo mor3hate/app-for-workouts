@@ -1,5 +1,5 @@
 <h1 align="center">App for workouts</h1>
-<h2 align="center">Deployed: <a href="https://app-for-workouts.herokuapp.com/" target="_blank">Click me!<a> </h2>
+<h2 align="center">Deployed: <a href="https://app-for-workouts.herokuapp.com/">Click me!<a> </h2>
 <h2>In this app you can create your new sport habit</h2>
 <h3>Features🤚: </h3>
 <p>Creating an account🧑‍💻</p>
