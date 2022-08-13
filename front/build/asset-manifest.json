@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.0b57c9bb.css",
+    "main.css": "/static/css/main.a94572be.css",
     "main.js": "/static/js/main.326a1fda.js",
     "static/js/787.71df535f.chunk.js": "/static/js/787.71df535f.chunk.js",
     "static/media/workout-list.jpg": "/static/media/workout-list.0f3ac05faaabbac81e74.jpg",
@@ -23,12 +23,12 @@
     "static/media/arrow.svg": "/static/media/arrow.b9642e6d78d0fc31be8eaf9c11fe8ea2.svg",
     "static/media/hamburger.svg": "/static/media/hamburger.ef0f4fd53dc251340fdf6e307d5943ad.svg",
     "static/media/hamburger-close.svg": "/static/media/hamburger-close.ac704b3880b061f2aa1e1a4358b3c9e3.svg",
-    "main.0b57c9bb.css.map": "/static/css/main.0b57c9bb.css.map",
+    "main.a94572be.css.map": "/static/css/main.a94572be.css.map",
     "main.326a1fda.js.map": "/static/js/main.326a1fda.js.map",
     "787.71df535f.chunk.js.map": "/static/js/787.71df535f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b57c9bb.css",
+    "static/css/main.a94572be.css",
     "static/js/main.326a1fda.js"
   ]
 }
